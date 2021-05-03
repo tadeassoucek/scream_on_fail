@@ -8,6 +8,6 @@ else
   mkdir -- $TARGET_DIR || (echo "Failed to create $TARGET_DIR"; exit 1)
 fi
 
-chmod +x sof
 cp -v -- scream.mp3 $TARGET_DIR/scream.mp3 || (echo "Failed to copy scream.mp3"; exit 1)
 (sed 's%{{DIRECTORY}}%$HOME/bin%' sof > $TARGET_DIR/sof) || (echo "Failed to copy sof"; exit 1)
+chmod +x -- $TARGET_DIR/sof
