@@ -1,0 +1,4 @@
+#!/bin/bash
+
+$@ || (mpv "{{DIRECTORY}}/scream.mp3" > /dev/null; exit 1)
+
